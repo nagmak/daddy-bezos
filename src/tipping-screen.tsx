@@ -3,10 +3,13 @@ import { Button } from '@chakra-ui/react'
 import BezosConfetti from './bezos-confetti';
 import LoveLetter from './love-letter';
 import {useState} from 'react';
+import { isDisabled } from '@chakra-ui/utils';
 
 function TippingScreen() {
     const [isConfetti, setIsConfetti] = useState(false);
     const [isLoveLetter, setIsLoveLetter] = useState(false);
+    const [tipDisabled, setTipDisabled] = useState(false);
+
   return (
     isConfetti ? (
         <Stack>
@@ -63,7 +66,13 @@ function TippingScreen() {
             top="0px">
                     Send Letter to Jeff Bezos
             </Button>
-            <Button backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="32px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
+            <Button disabled={tipDisabled} _disabled={{
+                color:"#7C7C7C", borderColor:"#7C7C7C", backgroundColor:"#E7E7E7"
+            }} _hover={tipDisabled ? {
+                color:"#7C7C7C", borderColor:"#7C7C7C", backgroundColor:"#E7E7E7"
+            }: {
+                backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
+            }} onClick={() => setTipDisabled(true)}backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="32px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
                     No Tip
             </Button>
             <Button color="#232F3E" fontSize="24px" fontStyle="normal" fontFamily="Open Sans" fontWeight="400" left="0px" top="0px" variant='link' textDecoration="underline">

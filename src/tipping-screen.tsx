@@ -1,7 +1,12 @@
 import { Stack, Spacer, Text, color } from '@chakra-ui/react'
 import { Button, ButtonGroup } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom';
 
 function TippingScreen() {
+    const navigate = useNavigate();
+    // const handleSendLetterToBezos = () => {
+    //     navigate('/bezos-confetti')
+    // }
   return (
     <div className="bezos-tipping-screen">
         <Stack spacing="24px" direction='column' align='center'>
@@ -35,6 +40,7 @@ function TippingScreen() {
                 </Button>
             </Stack>
             <Button 
+            onClick={() => navigate('/bezos')}
             backgroundColor="#FBFBFB" 
             borderColor="#232F3E" 
             borderWidth="1px" 

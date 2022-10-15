@@ -1,15 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Flex } from '@chakra-ui/react'
-import { Button } from '@chakra-ui/react'
-import TippingScreen from './tipping-screen';
+import Main from './Main';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <TippingScreen/>
+        <Main/>
       </header>
     </div>
   );

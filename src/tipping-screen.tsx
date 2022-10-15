@@ -3,7 +3,6 @@ import { Button } from '@chakra-ui/react'
 import BezosConfetti from './bezos-confetti';
 import LoveLetter from './love-letter';
 import {useState} from 'react';
-import { isDisabled } from '@chakra-ui/utils';
 
 function TippingScreen() {
     const [isConfetti, setIsConfetti] = useState(false);
@@ -20,8 +19,10 @@ function TippingScreen() {
         <LoveLetter setIsConfetti={setIsConfetti} setIsLoveLetter={setIsLoveLetter}/>
     ): (
     <div className="bezos-tipping-screen">
+        <Text align="left" pb="24px" color="#232F3E" fontSize="30px" fontFamily="Open Sans" fontWeight="600" fontStyle="normal" lineHeight="41px">Thank your generous benefactor, Jeff Bezos</Text>
+        
         <Stack spacing="24px" direction='column' align='center'>
-            <Stack spacing="24px" direction='row' align='center'>
+           <Stack spacing="24px" direction='row' align='center'>
                 <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
                     backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
                 }
@@ -55,7 +56,7 @@ function TippingScreen() {
             backgroundColor="#FBFBFB" 
             borderColor="#232F3E" 
             borderWidth="1px" 
-            fontSize="32px" 
+            fontSize="30px" 
             fontStyle="normal" 
             fontFamily="Open Sans" 
             fontWeight="600" 
@@ -64,7 +65,7 @@ function TippingScreen() {
             height="100px" 
             left="0px" 
             top="0px">
-                    Send Letter to Jeff Bezos
+                    Send letter to Daddy Bezos
             </Button>
             <Button disabled={tipDisabled} _disabled={{
                 color:"#7C7C7C", borderColor:"#7C7C7C", backgroundColor:"#E7E7E7"
@@ -72,11 +73,11 @@ function TippingScreen() {
                 color:"#7C7C7C", borderColor:"#7C7C7C", backgroundColor:"#E7E7E7"
             }: {
                 backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
-            }} onClick={() => setTipDisabled(true)}backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="32px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
+            }} onClick={() => setTipDisabled(true)}backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="30px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
                     No Tip
             </Button>
             <Button color="#232F3E" fontSize="24px" fontStyle="normal" fontFamily="Open Sans" fontWeight="400" left="0px" top="0px" variant='link' textDecoration="underline">
-                Back to Cart
+                Back to cart
             </Button>
         </Stack>
     </div>)

@@ -3,11 +3,23 @@ import { Button } from '@chakra-ui/react'
 import BezosConfetti from './bezos-confetti';
 import LoveLetter from './love-letter';
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+import {useEffect} from 'react';
+import * as ReactDOM from 'react-dom';
+
 
 function TippingScreen() {
     const [isConfetti, setIsConfetti] = useState(false);
     const [isLoveLetter, setIsLoveLetter] = useState(false);
     const [tipDisabled, setTipDisabled] = useState(false);
+    const navigate = useNavigate();
+
+    // find price - only element with class ".grand-total-price"
+
+    const total = Array.from(ReactDOM.findDOMNode(".grand-total-price"))[0];
+
+    //lol doesnt work
+    console.log(total.innerText);
 
   return (
     isConfetti ? (
@@ -76,7 +88,7 @@ function TippingScreen() {
             }} onClick={() => setTipDisabled(true)}backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="30px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
                     No Tip
             </Button>
-            <Button color="#232F3E" fontSize="24px" fontStyle="normal" fontFamily="Open Sans" fontWeight="400" left="0px" top="0px" variant='link' textDecoration="underline">
+            <Button onClick={() => navigate(-1)} color="#232F3E" fontSize="24px" fontStyle="normal" fontFamily="Open Sans" fontWeight="400" left="0px" top="0px" variant='link' textDecoration="underline">
                 Back to cart
             </Button>
         </Stack>

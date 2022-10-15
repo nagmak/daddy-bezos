@@ -208,7 +208,17 @@ function BezosConfetti() {
                   }
                 },
                 {
-                  src: "https://particles.js.org/images/fruits/pepper.png",
+                  src: "./images/Coin.png",
+                  width: 60,
+                  height: 60,
+                  particles: {
+                    size: {
+                      value: 60
+                    }
+                  }
+                },
+                {
+                  src: "./images/Coin.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -218,7 +228,7 @@ function BezosConfetti() {
                   }
                 },
                 {
-                  src: "https://particles.js.org/images/fruits/plum.png",
+                  src: "./images/Coin.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -228,7 +238,7 @@ function BezosConfetti() {
                   }
                 },
                 {
-                  src: "https://particles.js.org/images/fruits/star.png",
+                  src: "./images/Coin.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -238,17 +248,7 @@ function BezosConfetti() {
                   }
                 },
                 {
-                  src: "https://particles.js.org/images/fruits/strawberry.png",
-                  width: 32,
-                  height: 32,
-                  particles: {
-                    size: {
-                      value: 16
-                    }
-                  }
-                },
-                {
-                  src: "https://particles.js.org/images/fruits/watermelon.png",
+                  src: "./images/Coin.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -259,7 +259,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://particles.js.org/images/fruits/watermelon_slice.png",
+                  "./images/Coin.png",
                   width: 32,
                   height: 32,
                   particles: {

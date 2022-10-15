@@ -53,7 +53,7 @@ function BezosConfetti() {
           rotate: {
             value: {
               min: 0,
-              max: 60
+              max: 40
             },
             direction: "random",
             animation: {
@@ -79,8 +79,8 @@ function BezosConfetti() {
             distance: 30,
             enable: true,
             speed: {
-              min: -7,
-              max: 7
+              min: -4,
+              max: 4
             }
           },
           shape: {
@@ -99,7 +99,18 @@ function BezosConfetti() {
               image: [
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_face.png",
+                  width: 200,
+                  height: 200,
+                  particles: {
+                    size: {
+                      value: 80
+                    }
+                  }
+                },
+                {
+                  src:
+                    "./images/bezos_lasers.png",
                   width: 200,
                   height: 200,
                   particles: {
@@ -110,7 +121,18 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_laughing.png",
+                  width: 200,
+                  height: 200,
+                  particles: {
+                    size: {
+                      value: 90
+                    }
+                  }
+                },
+                {
+                  src:
+                    "./images/bezos_face.png",
                   width: 100,
                   height: 100,
                   particles: {
@@ -121,29 +143,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
-                  width: 100,
-                  height: 100,
-                  particles: {
-                    size: {
-                      value: 40
-                    }
-                  }
-                },
-                {
-                  src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
-                  width: 100,
-                  height: 100,
-                  particles: {
-                    size: {
-                      value: 40
-                    }
-                  }
-                },
-                {
-                  src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_laughing.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -154,7 +154,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                  "./images/bezos_face.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -165,7 +165,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_lasers.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -176,7 +176,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_laughing.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -187,7 +187,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                    "./images/bezos_lasers.png",
                   width: 32,
                   height: 32,
                   particles: {
@@ -198,7 +198,7 @@ function BezosConfetti() {
                 },
                 {
                   src:
-                    "https://www.celebrity-cutouts.com/wp-content/uploads/2022/04/jeff-bezos-smile-celebrity-mask-450x450.png",
+                  "./images/bezos_laughing.png",
                   width: 32,
                   height: 32,
                   particles: {

@@ -3,14 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import { Flex } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
-import BezosConfetti from './bezos-confetti';
+// import BezosConfetti from './bezos-confetti';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <BezosConfetti/>
+        {/* <BezosConfetti/> */}
         <Flex color='white' width="600px" height="800px">
           Wanna leave a tip?
         <Button w='100px' bg='green.500'>

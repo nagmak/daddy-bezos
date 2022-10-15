@@ -1,13 +1,21 @@
-import { Stack, Spacer, Text, color } from '@chakra-ui/react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
-import { useNavigate } from 'react-router-dom';
+import { Stack, Text } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
+import BezosConfetti from './bezos-confetti';
+import LoveLetter from './love-letter';
+import {useState} from 'react';
 
 function TippingScreen() {
-    const navigate = useNavigate();
-    // const handleSendLetterToBezos = () => {
-    //     navigate('/bezos-confetti')
-    // }
+    const [isConfetti, setIsConfetti] = useState(false);
+    const [isLoveLetter, setIsLoveLetter] = useState(false);
   return (
+    isConfetti ? (
+        <Stack>
+        <BezosConfetti/>
+        </Stack>
+
+    ): isLoveLetter ? (
+        <LoveLetter setIsConfetti={setIsConfetti} setIsLoveLetter={setIsLoveLetter}/>
+    ): (
     <div className="bezos-tipping-screen">
         <Stack spacing="24px" direction='column' align='center'>
             <Stack spacing="24px" direction='row' align='center'>
@@ -40,7 +48,7 @@ function TippingScreen() {
                 </Button>
             </Stack>
             <Button 
-            onClick={() => navigate('/bezos')}
+            onClick={() => setIsLoveLetter(true)}
             backgroundColor="#FBFBFB" 
             borderColor="#232F3E" 
             borderWidth="1px" 
@@ -62,7 +70,7 @@ function TippingScreen() {
                 Back to Cart
             </Button>
         </Stack>
-    </div>
+    </div>)
   );
 }
 

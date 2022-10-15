@@ -1,11 +1,11 @@
 import './App.css';
-import Main from './Main';
+import TippingScreen from './tipping-screen';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Main/>
+        <TippingScreen/>
       </header>
     </div>
   );

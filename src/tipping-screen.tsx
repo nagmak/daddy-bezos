@@ -34,7 +34,19 @@ function TippingScreen() {
                     </Stack>
                 </Button>
             </Stack>
-            <Button backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="32px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">
+            <Button 
+            backgroundColor="#FBFBFB" 
+            borderColor="#232F3E" 
+            borderWidth="1px" 
+            fontSize="32px" 
+            fontStyle="normal" 
+            fontFamily="Open Sans" 
+            fontWeight="600" 
+            color="#232F3E" 
+            width="898px" 
+            height="100px" 
+            left="0px" 
+            top="0px">
                     Send Letter to Jeff Bezos
             </Button>
             <Button backgroundColor="#FBFBFB" borderColor="#232F3E" borderWidth="1px" fontSize="32px" fontStyle="normal" fontFamily="Open Sans" fontWeight="600" color="#232F3E" width="898px" height="100px" left="0px" top="0px">

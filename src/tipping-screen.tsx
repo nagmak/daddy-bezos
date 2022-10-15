@@ -5,7 +5,6 @@ import LoveLetter from './love-letter';
 import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
-import * as ReactDOM from 'react-dom';
 
 
 function TippingScreen() {
@@ -14,12 +13,7 @@ function TippingScreen() {
     const [tipDisabled, setTipDisabled] = useState(false);
     const navigate = useNavigate();
 
-    // find price - only element with class ".grand-total-price"
 
-    const total = Array.from(ReactDOM.findDOMNode(".grand-total-price"))[0];
-
-    //lol doesnt work
-    console.log(total.innerText);
 
   return (
     isConfetti ? (
@@ -41,7 +35,7 @@ function TippingScreen() {
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >15%</Text>
-                        <Text fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$15.00</Text>
+                        <Text id="tip-option-1" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$4.81</Text>
                     </Stack>
                 </Button>
                 <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
@@ -50,7 +44,7 @@ function TippingScreen() {
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >69%</Text>
-                        <Text fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$69.00</Text>
+                        <Text id="tip-option-2" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$22.11</Text>
                     </Stack>
                 </Button>
                 <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
@@ -59,7 +53,7 @@ function TippingScreen() {
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >420%</Text>
-                        <Text fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$420.00</Text>
+                        <Text id="tip-option-3" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$134.61</Text>
                     </Stack>
                 </Button>
             </Stack>

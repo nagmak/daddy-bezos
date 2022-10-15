@@ -6,5 +6,19 @@
   "browser_action": {
     "default_popup":"index.html",
     "default_title": "checkout your order"
-  }
+  },
+
+ "content_scripts": [
+   {
+     "matches": ["https://www.amazon.com/gp/buy/*", "https://www.amazon.ca/gp/buy/*"],
+     "js": ["/scripts/content_script.js"],
+     "run_at": "document_idle"
+   }
+ ],
+
+ "web_accessible_resources": [
+        "index.html"
+    ],
+
+  "permissions": ["activeTab", "scripting"]
 }

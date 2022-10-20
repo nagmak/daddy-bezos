@@ -4,11 +4,7 @@ function BezosConfetti() {
   return (
     <Particles
       options={{
-        background: {
-          color: {
-            value: "#000000"
-          }
-        },
+        
         fullScreen: {
           enable: true,
           zIndex: 2
@@ -22,7 +18,7 @@ function BezosConfetti() {
             y: 100
           },
           rate: {
-            quantity: 10,
+            quantity: 20,
             delay: 0.25
           }
         },

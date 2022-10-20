@@ -1,12 +1,8 @@
 {
   "short_name": "React App",
   "version": "2",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Create React App Sample",
-  "browser_action": {
-    "default_popup":"index.html",
-    "default_title": "checkout your order"
-  },
 
  "content_scripts": [
    {
@@ -17,8 +13,11 @@
  ],
 
  "web_accessible_resources": [
-        "index.html"
-    ],
+    {
+      "resources": ["index.html"],
+      "matches": ["<all_urls>"]
+    } 
+  ],
 
   "permissions": ["activeTab", "scripting"]
 }

@@ -3,7 +3,7 @@ import { Button } from '@chakra-ui/react'
 import BezosConfetti from './bezos-confetti';
 import LoveLetter from './love-letter';
 import {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {useEffect} from 'react';
 
 
@@ -12,7 +12,23 @@ function TippingScreen() {
     const [isLoveLetter, setIsLoveLetter] = useState(false);
     const [tipDisabled, setTipDisabled] = useState(false);
     const navigate = useNavigate();
+    const url =new URL( window.location.href)
 
+    const params = url.searchParams
+    const price = Number(params.get("price"))
+    const [getPrice, setPrice] = useState(price);
+    const name = params.get("name")
+    const [getPersonName, setPersonName] = useState(name);
+    const purchase = params.get("purchase")
+    const [getPurchase, setPurchase] = useState(purchase);
+
+    console.log(price)
+
+    function reportDescision(descision: number){
+        var message = (price*descision).toFixed(2);
+        window.parent.postMessage(message, "*");
+        console.log("message sent");
+    }
 
 
   return (
@@ -22,38 +38,38 @@ function TippingScreen() {
         </Stack>
 
     ): isLoveLetter ? (
-        <LoveLetter setIsConfetti={setIsConfetti} setIsLoveLetter={setIsLoveLetter}/>
+        <LoveLetter setIsConfetti={setIsConfetti} setIsLoveLetter={setIsLoveLetter} getPersonName={getPersonName} getPurchase={getPurchase}/>
     ): (
     <div className="bezos-tipping-screen">
         <Text align="left" pb="24px" color="#232F3E" fontSize="30px" fontFamily="Open Sans" fontWeight="600" fontStyle="normal" lineHeight="41px">Thank your generous benefactor, Jeff Bezos</Text>
         
         <Stack spacing="24px" direction='column' align='center'>
            <Stack spacing="24px" direction='row' align='center'>
-                <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
+                <Button onClick={() => reportDescision(0.15)} backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
                     backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
                 }
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >15%</Text>
-                        <Text id="tip-option-1" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$4.81</Text>
+                        <Text id="tip-option-1" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">${(price*0.15).toFixed(2)}</Text>
                     </Stack>
                 </Button>
-                <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
+                <Button onClick={() => reportDescision(0.69)} backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
                     backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
                 }
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >69%</Text>
-                        <Text id="tip-option-2" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$22.11</Text>
+                        <Text id="tip-option-2" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">${(price*0.69).toFixed(2)}</Text>
                     </Stack>
                 </Button>
-                <Button backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
+                <Button onClick={()=> reportDescision(4.20)} backgroundColor="#232F3E" width="283px" height="276px" left="0px" top="0px" _hover={{
                     backgroundColor: "gray.200", color:"#232F3E", borderColor:"#232F3E", borderWidth:"1px"
                 }
                 }>
                     <Stack spacing="24px" direction='column' align='center'>
                         <Text fontSize="70px" fontFamily="Open Sans" fontWeight="400" fontStyle="normal" >420%</Text>
-                        <Text id="tip-option-3" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">$134.61</Text>
+                        <Text id="tip-option-3" fontSize="30px" fontFamily="Open Sans" line-height="41px" fontStyle="normal" fontWeight="400">${(price*4.2).toFixed(2)}</Text>
                     </Stack>
                 </Button>
             </Stack>

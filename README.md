@@ -1,3 +1,19 @@
+# Tip the Rich
+
+A satirical chrome extension for [Stupid Hacks Toronto 2022](http://hackstupid.com/) that allows you to tip Jeff Bezos,
+or send a very heartfelt letter right after you checkout your Amazon cart.
+
+## Tipping Screen
+![tipping screen](public/images/daddy-bezos-1.png)
+
+## Heartfelt Letter
+![heartfelt letter](public/images/daddy-bezos-2.png)
+
+## Coinbezosfetti
+![coinbezosfetti](public/images/daddy-bezos-3.png)
+
+This chrome extension was created with React & TypeScript (and also a really important script in vanilla JS).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
